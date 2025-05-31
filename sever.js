@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json()); //req.body
 const Person = require("./models/person");
 const MenuItem = require('./models/MenuItem')
-
+require('dotenv').config();
+const PORT = process.env.PORT || 5000
 
 app.get("/", function (req, res) {
   res.send("Welcome to my hotel... How i can help yoy ?");
@@ -110,8 +111,9 @@ app.use('/', personRouter);
 app.use('/',menuRouter)
 
 
-app.listen(3000, () => {
-  console.log("server is runing on  PORT : 3000");
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 // Mongoose : DB or node ke bich connection stablish krta hai or alos knaw as blueprint bhi bnata hai
