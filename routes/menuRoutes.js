@@ -36,7 +36,7 @@ router.get("/menu",async(req,res) => {
    }
 })
 
-
+// comment
 router.get('/menu/:test',async(req,res) => {
     try {
         const test = req.params.test;
@@ -54,4 +54,5 @@ router.get('/menu/:test',async(req,res) => {
     }
 })
 
+// comment for testing pupush ok
 module.exports = router;

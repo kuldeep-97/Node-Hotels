@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 // Define the MongoDB connection URL
 const mongoURL = 'mongodb://localhost:27017/hotels';
 
-
 // deprecated option
 // // Set up MongoDB connection 
 // mongoose.connect(mongoURL, {
